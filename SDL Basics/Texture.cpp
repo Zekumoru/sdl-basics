@@ -11,12 +11,6 @@
 #include <SDL3_image\SDL_image.h>
 #include <string>
 
-namespace Texture
-{
-SDL_Window *gWindow{ nullptr };
-SDL_Renderer *gRenderer{ nullptr };
-LTexture gPngTexture;
-
 /* Class Implementations */
 // LTexture Implementation
 LTexture::LTexture()
@@ -89,6 +83,10 @@ void LTexture::render(float x, float y)
 int LTexture::getWidth() const { return mWidth; }
 
 int LTexture::getHeight() const { return mHeight; }
+
+namespace Texture
+{
+LTexture gPngTexture;
 
 /* Function Implementations */
 bool init()

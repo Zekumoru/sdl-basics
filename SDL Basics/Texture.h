@@ -4,14 +4,12 @@
 #include <SDL3\SDL_video.h>
 #include <string>
 
-namespace Texture
-{
-/* Constants */
-constexpr const char *kTitle{ "SDL Texture Tutorial" };
+/* Global Variables */
+// The window we'll be rendering to
+extern SDL_Window *gWindow;
 
-// Screen dimension constants
-constexpr int kScreenWidth{ 640 };
-constexpr int kScreenHeight{ 480 };
+// The renderer used to draw to the window
+extern SDL_Renderer *gRenderer;
 
 /* Class prototypes */
 class LTexture
@@ -45,17 +43,20 @@ private:
   int mHeight;
 };
 
+namespace Texture
+{
+/* Constants */
+constexpr const char *kTitle{ "SDL Texture Tutorial" };
+
+// Screen dimension constants
+constexpr int kScreenWidth{ 640 };
+constexpr int kScreenHeight{ 480 };
+
 /* Global Variables */
-// The window we'll be rendering to
-extern SDL_Window *gWindow;
-
-// The renderer used to draw to the window
-extern SDL_Renderer *gRenderer;
-
 // The PNG image we will render
 extern LTexture gPngTexture;
 
-/* Function Implementations */
+/* Function Declarations */
 bool init();
 
 bool loadMedia();

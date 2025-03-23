@@ -1,4 +1,9 @@
 /* Headers */
-#include "Texture.h"
+#include "KeyEvents.h"
+#include <SDL3\SDL_render.h>
+#include <SDL3\SDL_video.h>
 
-int main(int argc, char *args[]) { return Texture::main(argc, args); }
+SDL_Window *gWindow{ nullptr };
+SDL_Renderer *gRenderer{ nullptr };
+
+int main(int argc, char *args[]) { return KeyEvents::main(argc, args); }
