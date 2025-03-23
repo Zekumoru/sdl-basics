@@ -1,4 +1,4 @@
 /* Headers */
-#include "Hello.h"
+#include "Texture.h"
 
-int main(int argc, char *args[]) { Hello::main(argc, args); }
+int main(int argc, char *args[]) { return Texture::main(argc, args); }
